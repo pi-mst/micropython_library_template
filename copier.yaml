@@ -1,0 +1,36 @@
+# CONFIGURATION
+_subdirectory: template
+_min_copier_version: 6.0.0a6
+_templates_suffix: .tmpl
+
+_envops:
+    autoescape: false
+    block_end_string: "%]"
+    block_start_string: "[%"
+    comment_end_string: "#]"
+    comment_start_string: "[#"
+    keep_trailing_newline: true
+    variable_end_string: "]]"
+    variable_start_string: "[["
+
+_jinja_extensions:
+  - copier_templates_extensions.TemplateExtensionLoader
+  - extensions/context.py:ContextUpdater
+# jinja2_time.TimeExtension provides the arrow.now() extension
+#   - jinja2_time.TimeExtension
+
+# PROMPT
+library_name:
+  type: str
+  help: Library name (should be short-ish). Consider prefixing with 'micropython_' if it's designed to support only MicroPython.
+  default: "my_new_library"
+
+library_description:
+  type: str
+  help: Library description. A sentence describing the purpose of the library.
+  default: "A MicroPython library designed to interface with the PIMAXX foobar sensor."
+
+single_file_module:
+  type: bool
+  help: Is your module contained in a single file?
+  default: "true"
