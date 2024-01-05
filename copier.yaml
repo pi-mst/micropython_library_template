@@ -1,23 +1,7 @@
 # CONFIGURATION
 _subdirectory: template
-_min_copier_version: 6.0.0a6
+_min_copier_version: "9.0"
 _templates_suffix: .tmpl
-
-_envops:
-    autoescape: false
-    block_end_string: "%]"
-    block_start_string: "[%"
-    comment_end_string: "#]"
-    comment_start_string: "[#"
-    keep_trailing_newline: true
-    variable_end_string: "]]"
-    variable_start_string: "[["
-
-_jinja_extensions:
-  - copier_templates_extensions.TemplateExtensionLoader
-  - extensions/context.py:ContextUpdater
-# jinja2_time.TimeExtension provides the arrow.now() extension
-#   - jinja2_time.TimeExtension
 
 # PROMPT
 library_name:
